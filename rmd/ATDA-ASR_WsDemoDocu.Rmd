@@ -1,0 +1,126 @@
+---
+output:
+  pdf_document:
+    includes:
+      in_header: header.tex
+  word_document: default
+---
+
+
+![Qualitas Logo](QualitasLogo.png)
+
+\fcolorbox{black}{white}{
+	\parbox[t]{1.0\linewidth}{
+		\centering \fontsize{12pt}{20pt}\selectfont % 
+		\vspace*{0.5cm} % 
+
+		\hfill Demo-Docu
+
+		\vspace*{0.5cm} 
+	}
+}
+
+\vspace*{0.5cm}
+
+\fcolorbox{black}{white}{
+	\parbox[t]{1.0\linewidth}{
+		\centering \fontsize{25pt}{40pt}\selectfont %
+		\vspace*{0.7cm}
+    ATDA-ASR         \\
+    Webservice       \\
+    Demonstration    \\
+
+		\vspace*{0.7cm} % Space between the end of the title and the bottom of the grey box
+	}
+}
+
+\vspace*{1cm}
+
+\begin{center}
+\includegraphics[width=0.5\textwidth]{Pedigree.png}
+\end{center}
+
+\vspace{5ex}
+{\centering \small
+\hfill
+\begin{tabular}{l}
+Peter von Rohr                      \\
+FB EDV, Qualitas AG                 \\
+\verb+http://www.qualitasag.ch+     \\
+\verb+peter.vonrohr@qualitasag.ch+  
+\end{tabular}
+}
+
+\pagebreak
+
+\tableofcontents
+
+\pagebreak
+
+# Dokumentenstatus
+
++-------------+------------------+-------+-----------------------------------------------+
+|  Version    |  Datum           |  Wer  |  Änderung                                     |
++=============+==================+=======+===============================================+
+|  0.0.0.900  |  16.02.2016      |  PvR  |  Erstellung                                   |
++-------------+------------------+-------+-----------------------------------------------+
+
+\pagebreak
+
+# Abkürzungen
+
++-------------+-------------------------------------------------------------------------+
+|  Abkürzung  |  Bedeutung                                                              |
++=============+=========================================================================+
+|  ATDA-ASR   |  Projekt des Automatisierten Tierdatenaustauschs der ASR                |
++-------------+-------------------------------------------------------------------------+
+|  ASR        |  Arbeitsgemeinschaft Schweizerischer Rinderzüchter                      |
++-------------+-------------------------------------------------------------------------+
+|  SOAP       |  Simple Object Access Protocol                                          |
++-------------+-------------------------------------------------------------------------+
+|  REST       |  representational state transfer                                        |
++-------------+-------------------------------------------------------------------------+
+
+
+\pagebreak
+
+
+# Erklärung
+Dieses Dokument beschreibt die Demo-Version des Webservices, welcher im Rahmen des Projekts 
+`ATDA-ASR` erstellt werden soll.
+
+```{r InitSectionEnumerator, echo=FALSE, results='hide'}
+robjSecEnum <- rdocuhelper::SectionEnumerator$new()
+```
+
+\vspace{1ex}
+```{r echo=FALSE,results='asis'}
+robjSecEnum$displayNumSection("# Ausgangslage")
+```
+Die Demo dient als Vorbereitung für den zu erstellenden Webservice für den automatisierten 
+Tierdatenaustausch. In diesem Teilprojekt sollen verschiedene technische Möglichkeiten 
+evaluiert werden.
+
+In der Evaluation sollen die Technologien 
+
+- __SOAP__ (Simple Object Access Protocol) und 
+- __REST__ (representational state transfer) 
+
+miteinander verglichen werden.
+
+Auf der Umsetzungsseite sollen beide Technologien mit `Java` implementiert werden. Obwohl andere Sprachen schneller zu einem Resultat führen ist doch `Java` der gemeinhin akzeptierte Standard im Bereich der Webservice-Programmierung.
+
+
+\vspace{1ex}
+```{r echo=FALSE,results='asis'}
+robjSecEnum$displayNumSection("# Hintergrundinformation")
+```
+Das Web bietet eine Reihe von Anleitungen und Übersichten zum Thema "Wie baue ich einen Webservice". Als gute Quelle ist hier sicher die Dokumentation von JavaEE (http://docs.oracle.com/javaee/7/index.html) zu nennen. Im Jave EE Tutorial behandelt Teil VI die Web Services.
+
+Kapitel 13 vom Buch "Java 7 - Mehr als eine Insel" (http://openbook.rheinwerk-verlag.de/java7/) gibt eine Übersicht über die beiden verwendeten Technologien im Bereich Webservice.
+
+\vspace{1ex}
+```{r echo=FALSE,results='asis'}
+robjSecEnum$displayNumSection("# Vorbereitung")
+```
+Zur Erstellung von Webservices benötigen wir eine Reihe von Tools. 
